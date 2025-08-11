@@ -23,18 +23,38 @@ It will also apply **severity levels** for alerting, depending on the type of ev
 
 ---
 
-🔧 Setup Instructions
-
-1 Clone the repository
-```bash
-git clone https://github.com/your-username/command-centre-backend.git
-cd command-centre-backend 
+Logic & Approach
+Models
 
 
-
-2 Create & activate virtual environment
-```bash
-python -m venv venv
-venv\Scripts\activate   
+VideoAlert: will store camera alerts.
 
 
+SensorAlert: will store sensor readings.
+
+
+Serializers
+
+
+Validate incoming JSON and convert it into model instances.
+
+
+Views
+
+
+On making POST requests will store alerts.
+
+
+Compare timestamps to check correlation.
+
+
+Severity levels (optional)
+
+
+If event_type == Intrusion and reading > 50°C → Critical.
+
+
+If event_type == Suspicious Movement → Medium.
+
+
+Otherwise → Low.
