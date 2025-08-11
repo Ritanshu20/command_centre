@@ -20,6 +20,20 @@ It will also apply **severity levels** for alerting, depending on the type of ev
    - Normal reading(s) = Low level.
 
 ---
+Project Structure
+command_centre/
+│
+├── alerts/ # App for handling alerts
+│ ├── models.py # Database models for alerts
+│ ├── serializers.py # Data validation & transformation
+│ ├── views.py # API logic
+│ ├── urls.py # Routes for alert endpoints
+│
+├── command_centre/ # Django project settings
+│
+├── db.sqlite3 # SQLite database (auto-created)
+├── manage.py
+└── README.md
 
 
 
