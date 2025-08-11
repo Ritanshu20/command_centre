@@ -2,8 +2,8 @@
 Description
 This is a **Django REST API** backend for a Command Centre application.  
 It processes alerts from:
-- **Video Monitoring** – camera alerts, e.g., Intrusion Detection.
-- **Sensor Platform** – temperature or other readings.
+- Video Monitoring – camera alerts, e.g., Intrusion Detection.
+- Sensor Platform – temperature or other readings.
 
 Your project will have a service that will allow you to **correlate** video and sensor alerts within **5 seconds** of each other.  
 It will also apply **severity levels** for alerting, depending on the type of event and the sensor readings.
@@ -20,20 +20,17 @@ It will also apply **severity levels** for alerting, depending on the type of ev
    - Normal reading(s) = Low level.
 
 ---
-Project Structure
-command_centre/
-│
-├── alerts/ # App for handling alerts
-│ ├── models.py # Database models for alerts
-│ ├── serializers.py # Data validation & transformation
-│ ├── views.py # API logic
-│ ├── urls.py # Routes for alert endpoints
-│
-├── command_centre/ # Django project settings
-│
-├── db.sqlite3 # SQLite database (auto-created)
-├── manage.py
-└── README.md
+
+---
+
+🔧 Setup Instructions
+
+1 Clone the repository
+```bash
+git clone https://github.com/your-username/command-centre-backend.git
+cd command-centre-backend
+
+
 
 
 
