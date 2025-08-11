@@ -21,8 +21,6 @@ It will also apply **severity levels** for alerting, depending on the type of ev
 
 ---
 
----
-
 Logic & Implementation Details 
 1. Models
   VideoAlert: holds video alert information.
@@ -36,5 +34,6 @@ Logic & Implementation Details
 3. Correlation Logic  
    When retrieving correlated alerts, we will query both tables.
    We will match events when the timestamps differ by ≤5 seconds. 
+
 
 
