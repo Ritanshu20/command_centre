@@ -28,9 +28,13 @@ It will also apply **severity levels** for alerting, depending on the type of ev
 1 Clone the repository
 ```bash
 git clone https://github.com/your-username/command-centre-backend.git
-cd command-centre-backend
+cd command-centre-backend 
 
 
 
+2 Create & activate virtual environment
+```bash
+python -m venv venv
+venv\Scripts\activate   
 
 
