@@ -23,38 +23,18 @@ It will also apply **severity levels** for alerting, depending on the type of ev
 
 ---
 
-Logic & Approach
-Models
+Logic & Implementation Details 
+1. Models
+  VideoAlert: holds video alert information.
+  SensorAlert: holds sensor alert information. 
+
+2. Views
+   VideoAlertView: handles POST requests for /video-alert
+   SensorAlertView: handles POST requests for /sensor-alert. 
+   CorrelatedAlertsView: handles GET requests for /correlated-alerts.
+
+3. Correlation Logic  
+   When retrieving correlated alerts, we will query both tables.
+   We will match events when the timestamps differ by ≤5 seconds. 
 
 
-VideoAlert: will store camera alerts.
-
-
-SensorAlert: will store sensor readings.
-
-
-Serializers
-
-
-Validate incoming JSON and convert it into model instances.
-
-
-Views
-
-
-On making POST requests will store alerts.
-
-
-Compare timestamps to check correlation.
-
-
-Severity levels (optional)
-
-
-If event_type == Intrusion and reading > 50°C → Critical.
-
-
-If event_type == Suspicious Movement → Medium.
-
-
-Otherwise → Low.
